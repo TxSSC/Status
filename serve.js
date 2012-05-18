@@ -10,4 +10,4 @@ app = http.createServer(function(req, res) {
   });
 });
 
-app.listen(3000 || process.env.STATUS_PORT);
+app.listen(process.env.STATUS_PORT || 3000);
