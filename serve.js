@@ -1,7 +1,7 @@
 var app,
     http = require('http'),
     StaticServer = require('node-static').Server,
-    files = new StaticServer('./');
+    files = new StaticServer(__dirname);
 
 
 app = http.createServer(function(req, res) {
