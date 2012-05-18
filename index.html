@@ -10,9 +10,34 @@
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 <body>
-  <div id="main" class="js-main"></div>
+  <div id="main" class="container">
 
-  <script src="js/jquery.js"></script>
-  <script src="js/ember.js"></script>
+    <script type="text/x-handlebars">
+      <h1>TXSSC IT Status</h1>
+      {{view App.MainView}}
+    </script>
+
+    <!-- Templates -->
+    <script type="text/x-handlebars" data-template-name="main">
+      <ul class="users">
+        {{#each App.UsersController}}
+          {{view App.UserView contentBinding="this"}}
+        {{/each}}
+      </ul>
+    </script>
+    <script type="text/x-handlebars" data-template-name="user">
+      {{#with content}}
+        <span class="avatar"><img alt="{{unbound firstName}}" src="{{unbound avatar}}" width='64' height='64'></span>
+        <span class="name">{{firstName}}</span>
+        <span class="location">{{location}}</span>
+      {{/with}}
+    </script>
+    <!-- End of Templates -->
+  </div>
+
+  <!-- scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ember.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
