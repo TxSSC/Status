@@ -118,7 +118,7 @@ body {
     clear: both;
   }
 
-  .users li span {
+  .users li > span {
     margin-right: 14px;
     float: left;
     display: block;
@@ -126,12 +126,22 @@ body {
     overflow: hidden;
   }
 
-  .users .name, .users .location {
+  .users .name {
     line-height: 64px;
   }
 
-  .users .location {
+  .users .info {
     float: right;
+    height: 64px;
+  }
+
+  .users .info span {
+    display: block;
+    clear: both;
+    text-align: right;
+    line-height: 32px;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .users .avatar img {

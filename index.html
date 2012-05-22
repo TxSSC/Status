@@ -29,7 +29,10 @@
       {{#with content}}
         <span class="avatar"><img alt="{{unbound firstName}}" src="{{unbound avatar}}" width='64' height='64'></span>
         <span class="name">{{firstName}}</span>
-        <span class="location">{{location}}</span>
+        <div class="info">
+          <span class="location">{{location}}</span>
+          <span class="return">{{returning}}</span>
+        </div>
       {{/with}}
     </script>
     <!-- End of Templates -->

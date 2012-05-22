@@ -23,7 +23,8 @@
               id: user._id,
               name: user.name,
               avatar: user.avatar,
-              location: user.location
+              location: user.location,
+              returning: user.returning
             });
           });
 
