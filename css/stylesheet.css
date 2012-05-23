@@ -147,3 +147,7 @@ body {
   .users .avatar img {
     display: block;
   }
+
+  .users .return {
+    font-size: 16px;
+  }
