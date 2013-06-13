@@ -15,10 +15,11 @@
       var self = this;
 
       $.ajax({
-        url: 'http://dashboard.texasschoolsafetycenter.com:3003/users',
+        url: 'http://stalker.texasschoolsafetycenter.com/users',
         dataType: 'json',
         success: function(data) {
-          data = data.map(function(user) {
+          var content;
+          content = data.map(function(user) {
             return App.User.create({
               id: user._id,
               name: user.name,
@@ -28,7 +29,7 @@
             });
           });
 
-          self.set('content', data);
+          self.set('content', content);
         }
       });
     }
